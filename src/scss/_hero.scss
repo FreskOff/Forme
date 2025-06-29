@@ -22,11 +22,11 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('../public/noisy-background.jpg');
+        background-image: url('/noise.png');
         background-size: 300px;
         opacity: 0.05;
         animation: noise 2s infinite linear;
-        z-index: 2;
+        z-index: 11; // Обновлено: было 2
         pointer-events: none;
     }
     

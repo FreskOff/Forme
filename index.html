@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GlowSite - Креативное веб-дизайн агентство</title>
+    <meta name="description" content="GlowSite - креативное веб-дизайн агентство. Создаем современные сайты и цифровые продукты.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Добавлена ссылка на CSS -->
     <link rel="stylesheet" href="./src/scss/main.scss">
 </head>
 <body>
@@ -64,13 +64,12 @@
                     которые превращают ваши идеи в реальность.
                 </p>
                 <div class="about__collage">
-                    <!-- Исправлены пути к изображениям -->
-                    <div class="collage__item"><img src="/images/collage1.jpg" alt="Наш офис"></div>
-                    <div class="collage__item"><img src="/images/collage2.jpg" alt="Рабочий процесс"></div>
-                    <div class="collage__item"><img src="/images/collage3.jpg" alt="Команда"></div>
-                    <div class="collage__item"><img src="/images/collage4.jpg" alt="Встреча с клиентом"></div>
-                    <div class="collage__item"><img src="/images/collage5.jpg" alt="Дизайн в процессе"></div>
-                    <div class="collage__item"><img src="/images/collage6.jpg" alt="Презентация проекта"></div>
+                    <div class="collage__item"><img src="/images/collage1.jpg" alt="Наш офис" width="300" height="300"></div>
+                    <div class="collage__item"><img src="/images/collage2.jpg" alt="Рабочий процесс" width="300" height="300"></div>
+                    <div class="collage__item"><img src="/images/collage3.jpg" alt="Команда" width="300" height="300"></div>
+                    <div class="collage__item"><img src="/images/collage4.jpg" alt="Встреча с клиентом" width="300" height="300"></div>
+                    <div class="collage__item"><img src="/images/collage5.jpg" alt="Дизайн в процессе" width="300" height="300"></div>
+                    <div class="collage__item"><img src="/images/collage6.jpg" alt="Презентация проекта" width="300" height="300"></div>
                 </div>
             </div>
         </div>
@@ -83,12 +82,40 @@
             <div class="portfolio__grid">
                 <div class="portfolio-card glass-effect">
                     <div class="sheen"></div>
-                    <!-- Исправлены пути к изображениям -->
-                    <img src="/images/portfolio1.jpg" alt="Корпоративный сайт">
+                    <img src="/images/portfolio1.jpg" alt="Корпоративный сайт" width="320" height="224">
                     <h3>Корпоративный сайт</h3>
                     <p>UI/UX дизайн</p>
                 </div>
-                <!-- Повторить 5 раз с разными изображениями -->
+                <div class="portfolio-card glass-effect">
+                    <div class="sheen"></div>
+                    <img src="/images/portfolio2.jpg" alt="Интернет-магазин" width="320" height="224">
+                    <h3>Интернет-магазин</h3>
+                    <p>E-commerce решение</p>
+                </div>
+                <div class="portfolio-card glass-effect">
+                    <div class="sheen"></div>
+                    <img src="/images/portfolio3.jpg" alt="Мобильное приложение" width="320" height="224">
+                    <h3>Мобильное приложение</h3>
+                    <p>UI/UX для iOS/Android</p>
+                </div>
+                <div class="portfolio-card glass-effect">
+                    <div class="sheen"></div>
+                    <img src="/images/portfolio4.jpg" alt="Брендинг" width="320" height="224">
+                    <h3>Фирменный стиль</h3>
+                    <p>Айдентика и брендинг</p>
+                </div>
+                <div class="portfolio-card glass-effect">
+                    <div class="sheen"></div>
+                    <img src="/images/portfolio5.jpg" alt="Веб-приложение" width="320" height="224">
+                    <h3>Веб-приложение</h3>
+                    <p>CRM система</p>
+                </div>
+                <div class="portfolio-card glass-effect">
+                    <div class="sheen"></div>
+                    <img src="/images/portfolio6.jpg" alt="Промо-сайт" width="320" height="224">
+                    <h3>Промо-сайт</h3>
+                    <p>Для запуска продукта</p>
+                </div>
             </div>
         </div>
     </section>
@@ -108,7 +135,26 @@
                     </ul>
                     <button class="btn btn--outline">Заказать</button>
                 </div>
-                <!-- Еще 2 карточки -->
+                <div class="price-card">
+                    <h3 class="price-card__title">Корпоративный сайт</h3>
+                    <p class="price-card__price">от 120 000 ₽</p>
+                    <ul class="price-card__features">
+                        <li>Многостраничный дизайн</li>
+                        <li>Адаптивная верстка</li>
+                        <li>Интеграция с 1С</li>
+                    </ul>
+                    <button class="btn btn--outline">Заказать</button>
+                </div>
+                <div class="price-card">
+                    <h3 class="price-card__title">Интернет-магазин</h3>
+                    <p class="price-card__price">от 200 000 ₽</p>
+                    <ul class="price-card__features">
+                        <li>Каталог товаров</li>
+                        <li>Корзина и оплата</li>
+                        <li>Личный кабинет</li>
+                    </ul>
+                    <button class="btn btn--outline">Заказать</button>
+                </div>
             </div>
         </div>
     </section>
@@ -117,13 +163,20 @@
     <section id="reviews" class="reviews section">
         <div class="container">
             <h2 class="section__title">Отзывы клиентов</h2>
-            <div class="slider">
-                <div class="slider__track">
+            <div class="slider" role="region" aria-label="Отзывы клиентов">
+                <div class="slider__track" aria-live="polite">
                     <div class="slider__slide">
                         <p class="review__text">Отличная работа! Сайт превзошел все ожидания.</p>
                         <p class="review__author">Иван Петров, CEO TechCompany</p>
                     </div>
-                    <!-- Еще 2 слайда -->
+                    <div class="slider__slide">
+                        <p class="review__text">Быстрое исполнение и креативный подход. Рекомендую!</p>
+                        <p class="review__author">Мария Иванова, Marketing Director</p>
+                    </div>
+                    <div class="slider__slide">
+                        <p class="review__text">Профессионалы своего дела. Сайт приносит клиентов!</p>
+                        <p class="review__author">Алексей Смирнов, Founder StartupHub</p>
+                    </div>
                 </div>
                 <button class="slider__btn slider__btn--prev" aria-label="Предыдущий слайд">←</button>
                 <button class="slider__btn slider__btn--next" aria-label="Следующий слайд">→</button>
@@ -139,20 +192,20 @@
                 <form id="contact-form" class="contact-form">
                     <div class="form-group">
                         <label for="name">Имя</label>
-                        <input type="text" id="name" name="name" required>
-                        <div class="error-message" id="name-error"></div>
+                        <input type="text" id="name" name="name" required aria-describedby="name-error" aria-invalid="false">
+                        <div class="error-message" id="name-error" role="alert"></div>
                     </div>
                     
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                        <div class="error-message" id="email-error"></div>
+                        <input type="email" id="email" name="email" required aria-describedby="email-error" aria-invalid="false">
+                        <div class="error-message" id="email-error" role="alert"></div>
                     </div>
                     
                     <div class="form-group">
                         <label for="message">Сообщение</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <div class="error-message" id="message-error"></div>
+                        <textarea id="message" name="message" rows="5" required aria-describedby="message-error" aria-invalid="false"></textarea>
+                        <div class="error-message" id="message-error" role="alert"></div>
                     </div>
                     
                     <div class="form-group form-group--checkbox">
@@ -166,7 +219,10 @@
                 <div class="map">
                     <iframe 
                         src="https://yandex.ru/map-widget/v1/?um=constructor%3A8a1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c&amp;source=constructor" 
-                        frameborder="0"></iframe>
+                        frameborder="0"
+                        title="Карта с нашим офисом"
+                        aria-label="Карта"
+                    ></iframe>
                 </div>
             </div>
         </div>
@@ -193,7 +249,7 @@
     </footer>
 
     <!-- Toast -->
-    <div id="toast" class="toast">Сообщение отправлено успешно!</div>
+    <div id="toast" class="toast" role="status" aria-live="polite">Сообщение отправлено успешно!</div>
 
     <!-- SVG Sprite -->
     <svg style="display: none;">
@@ -208,7 +264,6 @@
         </symbol>
     </svg>
 
-    <!-- Исправлен путь к скрипту -->
     <script type="module" src="/src/js/main.js"></script>
 </body>
 </html>

@@ -19,5 +19,5 @@
 
 1. Клонировать репозиторий:
 ```bash
-git clone https://github.com/FreskOff/glowsite.git
+git clone https://github.com/your-username/glowsite.git
 cd glowsite
