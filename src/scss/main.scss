@@ -1,0 +1,119 @@
+@import 'variables';
+@import 'reset';
+@import 'mixins';
+@import 'animations';
+
+@import 'header';
+@import 'hero';
+@import 'about';
+@import 'portfolio';
+@import 'services';
+@import 'reviews';
+@import 'contacts';
+@import 'footer';
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at center, #1e0028 0%, #000 100%);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 100px 0;
+    
+    &__title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 60px;
+        position: relative;
+        
+        &::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: $accent-color;
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    
+    &--primary {
+        background: $accent-color;
+        color: white;
+        
+        &:hover {
+            background: lighten($accent-color, 10%);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(138, 43, 226, 0.2);
+        }
+    }
+    
+    &--outline {
+        background: transparent;
+        border: 2px solid $accent-color;
+        color: $accent-color;
+        
+        &:hover {
+            background: rgba(138, 43, 226, 0.1);
+        }
+    }
+    
+    &--small {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    
+    @media (max-width: 600px) {
+        backdrop-filter: blur(20px);
+    }
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    
+    &.show {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

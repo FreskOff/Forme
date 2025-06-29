@@ -1,0 +1,19 @@
+{
+  "name": "glowsite",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "sass": "^1.89.2",
+    "vite": "^5.0.11"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

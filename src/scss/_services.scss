@@ -1,0 +1,53 @@
+.services {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        
+        @include respond-to(tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @include respond-to(mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.price-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: $border-radius;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    &__title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    &__price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $accent-color;
+        margin-bottom: 20px;
+    }
+    
+    &__features {
+        margin-bottom: 25px;
+        
+        li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
